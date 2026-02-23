@@ -1,4 +1,4 @@
-from mcp.server.fastmcp import FastMCP, Context
+from fastmcp import FastMCP, Context
 import httpx
 from bs4 import BeautifulSoup
 from typing import List, Dict, Optional, Any
@@ -242,7 +242,8 @@ async def fetch_content(url: str, ctx: Context) -> str:
 
 
 def main():
-    mcp.run()
+    # Run the MCP server
+    mcp.run(transport="http", host="0.0.0.0", port=8000)
 
 
 if __name__ == "__main__":
