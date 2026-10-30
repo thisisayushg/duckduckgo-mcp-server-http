@@ -1,4 +1,5 @@
-from fastmcp import FastMCP, Context
+# from fastmcp import FastMCP, Context
+from mcp.server.mcpserver import MCPServer, Context
 import httpx
 from bs4 import BeautifulSoup, NavigableString
 from typing import List, Optional
